@@ -113,19 +113,19 @@ class ChatBot:
         # Return the compiled workflow with memory checkpointing
         return workflow.compile(checkpointer=memory)
 
-    def invoke(self, user_input: str) -> str:
+    def invoke(self, input_prompt: str) -> str:
         """
         Invoke the chatbot with user input and return the model's response.
 
         Args:
-            user_input (str): The input from the user to the chatbot.
+            input_prompt (str): The input from the user to the chatbot.
 
         Returns:
             str: The response from the chatbot model.
         """
 
-        # Convert the user input into a HumanMessage and invoke the graph
-        input_messages = [HumanMessage(user_input)]
+        # Convert the input prompt into a HumanMessage and invoke the graph
+        input_messages = [HumanMessage(input_prompt)]
         output = self.graph.invoke({"messages": input_messages}, self.config)
 
         # Return the content of the last message in the output
