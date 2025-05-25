@@ -1,0 +1,7 @@
+{
+  "OPENAI_API_KEY": "openai-api-key",
+  "LANGCHAIN_TRACING_V2" : "true",
+  "LANGCHAIN_API_KEY" : "langsmith-api-key",
+  "LANGCHAIN_PROJECT" : "langsmith-project-name",
+  "MODEL_NAME": "gpt-4.1-nano-2025-04-14"
+}
