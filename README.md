@@ -78,10 +78,7 @@ http://localhost:8501
 
 Below is a short video demonstrating the chatbot in action within the Streamlit UI. Prompts can be entered, and the LLM will respond in real time, maintaining chat memory and formatting. The chatbot is designed to be user-friendly and efficient, providing concise responses while managing token usage effectively.
 
-<video width="600" controls>
-  <source src="gpt_chatbot/media/AI_ChatBot.mp4" type="video/mp4">
-  Browser does not support the video tag.
-</video>
+![Chatbot Demo](gpt_chatbot/media/AI_ChatBot.gif)
 
 ---
 
