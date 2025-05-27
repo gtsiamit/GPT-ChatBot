@@ -15,7 +15,7 @@ GPT-ChatBot
    ├─ chatbot_backend.py  # Core chatbot class with LangChain, LangGraph, memory, trimmer
    ├─ config_example.json  # Template config file to be copied and filled with API keys and model
    ├─ media
-   │  ├─ AI_ChatBot.mp4  # Demo video of the chatbot in action
+   │  ├─ AI_ChatBot.gif  # Demo of the chatbot in action
    │  └─ ChatBot_Tracing.png  # Example LangSmith trace log
    ├─ requirements.txt  # Python dependencies
    └─ utils.py  # Helper functions for config loading, datetime handling, etc.
@@ -26,8 +26,8 @@ GPT-ChatBot
 ## Installation
 I a virtual environment, e.g. `conda`, with Python 3.13 the project dependencies can be installed as follows:
 ```bash
-cd GPT-ChatBot
-pip install -r gpt_chatbot/requirements.txt
+cd gpt_chatbot
+pip install -r requirements.txt
 ```
 
 ---
