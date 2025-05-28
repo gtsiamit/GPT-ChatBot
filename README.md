@@ -5,26 +5,34 @@ The chatbot trims messages to reduce token usage (and cost), and logs each inter
 
 ---
 
+## Streamlit Demo
+
+Below is a short video demonstrating the chatbot in action within the Streamlit UI. Prompts can be entered, and the LLM will respond in real time, maintaining chat memory and formatting. The chatbot is designed to be user-friendly and efficient, providing concise responses while managing token usage effectively.
+
+![Chatbot Demo](gpt_chatbot/media/AI_ChatBot.gif)
+
+---
+
 ## Project Structure
 ```text
 GPT-ChatBot
 ├─ README.md
 ├─ .gitignore
 └─ gpt_chatbot
-   ├─ chatbot_app.py  # Streamlit frontend UI and session management
-   ├─ chatbot_backend.py  # Core chatbot class with LangChain, LangGraph, memory, trimmer
-   ├─ config_example.json  # Template config file to be copied and filled with API keys and model
+   ├─ chatbot_app.py   # Streamlit frontend UI and session management
+   ├─ chatbot_backend.py   # Core chatbot class with LangChain, LangGraph, memory, trimmer
+   ├─ config_example.json   # Template config file to be copied and filled with API keys and model
    ├─ media
-   │  ├─ AI_ChatBot.gif  # Demo of the chatbot in action
-   │  └─ ChatBot_Tracing.png  # Example LangSmith trace log
-   ├─ requirements.txt  # Python dependencies
-   └─ utils.py  # Helper functions for config loading, datetime handling, etc.
+   │  ├─ AI_ChatBot.gif   # Demo of the chatbot in action
+   │  └─ ChatBot_Tracing.png   # Example LangSmith trace log
+   ├─ requirements.txt   # Python dependencies
+   └─ utils.py   # Helper functions for config loading, datetime handling, etc.
 ```
 
 ---
 
 ## Installation
-I a virtual environment, e.g. `conda`, with Python 3.13 the project dependencies can be installed as follows:
+In a virtual environment, e.g. `conda`, with Python 3.13 the project dependencies can be installed as follows:
 ```bash
 cd gpt_chatbot
 pip install -r requirements.txt
@@ -35,7 +43,7 @@ pip install -r requirements.txt
 ## Running the Chatbot App
 
 ### Config Setup
-Before runnig the chatbot the configuration file needs to be set up with your OpenAI and LangSmith API keys, as well as the model that will be used.  
+Before running the chatbot the configuration file needs to be set up with OpenAI and LangSmith API keys, as well as the model that will be used.  
 The provided template config file `gpt_chatbot/config_example.json` should be copied to `gpt_chatbot/config.json` and edited with the API keys and model name.
 
 ```json
@@ -71,14 +79,6 @@ http://localhost:8501
 - `LangGraph` is used to manage conversation state and memory
 - A trimmer is used to limit message length, optimizing for cost and performance
 - `LangSmith` is used for LLM trace logging, enabling session tracking and debugging. Each session is logged with a unique dynamic thread ID for trace filtering.
-
----
-
-## Streamlit Demo
-
-Below is a short video demonstrating the chatbot in action within the Streamlit UI. Prompts can be entered, and the LLM will respond in real time, maintaining chat memory and formatting. The chatbot is designed to be user-friendly and efficient, providing concise responses while managing token usage effectively.
-
-![Chatbot Demo](gpt_chatbot/media/AI_ChatBot.gif)
 
 ---
 
